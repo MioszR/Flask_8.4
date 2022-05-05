@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kontakt</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        {% extends "parents.html" %}
+        {% block content %}
+        <h2>{{title}}</h2>
+        <ul>
+            {% for item in items %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+        <form action="" method="post">
+            <h3>Wyślij wiadomość</h3>
+            <input form="textarea">
+            <button type="submit">Wyślij</button>
+        </form>
+        {% endblock %}
+    </body>
+
+</html>
